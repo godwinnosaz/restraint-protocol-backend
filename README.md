@@ -69,7 +69,7 @@ If they fail, they lose their stake.
 ## ⚙️ Installation
 
 ```bash
-git clone https://github.com/your-username/restraint-protocol-backend.git
+git clone https://github.com/godwinnosaz/restraint-protocol-backend.git
 cd restraint-protocol-backend
 npm install
 npm start
