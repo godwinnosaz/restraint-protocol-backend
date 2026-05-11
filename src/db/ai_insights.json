@@ -1,0 +1,52 @@
+[
+  {
+    "id": "ai_8ece790d7d9d",
+    "user_id": "user_001",
+    "session_id": "pre_session",
+    "type": "risk",
+    "content": "Risk is low. Your streak and history suggest strong follow-through. Commit to the full session. You are ready.",
+    "risk_score": 0.35,
+    "confidence": 0.85,
+    "created_at": "2026-04-24T18:08:06.171Z"
+  },
+  {
+    "id": "ai_2a8ce450b3a3",
+    "user_id": "user_001",
+    "session_id": "pre_session",
+    "type": "risk",
+    "content": "You are ready. Commit to the full session.",
+    "risk_score": 0.3,
+    "confidence": 0.85,
+    "created_at": "2026-05-03T12:22:43.742Z"
+  },
+  {
+    "id": "ai_2d3d17dfce42",
+    "user_id": "user_001",
+    "session_id": "session_187185fdbd8c",
+    "type": "advice",
+    "content": "Document what triggered your exit. That trigger owns you right now. Take it back.",
+    "risk_score": 0.7,
+    "confidence": 0.8,
+    "created_at": "2026-05-03T12:25:18.154Z"
+  },
+  {
+    "id": "ai_3aa1255953f4",
+    "user_id": "user_30104ae05a9e",
+    "session_id": "pre_session",
+    "type": "risk",
+    "content": "Moderate risk. Silence your phone and commit.",
+    "risk_score": 0.5,
+    "confidence": 0.85,
+    "created_at": "2026-05-10T19:17:02.358Z"
+  },
+  {
+    "id": "ai_c1fa0883874d",
+    "user_id": "user_30104ae05a9e",
+    "session_id": "pre_session",
+    "type": "risk",
+    "content": "Moderate risk. Silence your phone and commit.",
+    "risk_score": 0.55,
+    "confidence": 0.85,
+    "created_at": "2026-05-10T19:38:17.237Z"
+  }
+]

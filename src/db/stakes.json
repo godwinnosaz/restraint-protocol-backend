@@ -1,0 +1,26 @@
+[
+  {
+    "id": "stake_8868017ddb9c",
+    "user_id": "user_001",
+    "session_id": "session_187185fdbd8c",
+    "amount": 5000,
+    "currency": "NGN",
+    "status": "slashed",
+    "created_at": "2026-05-03T12:22:55.582Z",
+    "wallet_address": null,
+    "tx_signature": null,
+    "chain_status": null
+  },
+  {
+    "id": "stake_8149f8bbd1d2",
+    "user_id": "user_30104ae05a9e",
+    "session_id": "session_67e6df4d8311",
+    "amount": 5000,
+    "currency": "NGN",
+    "status": "locked",
+    "created_at": "2026-05-10T19:17:07.955Z",
+    "wallet_address": null,
+    "tx_signature": null,
+    "chain_status": null
+  }
+]

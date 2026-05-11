@@ -1,0 +1,57 @@
+[
+  {
+    "id": "user_001",
+    "username": "Demo User",
+    "email": "demo@restraint.app",
+    "password_hash": "demo_hash",
+    "focus_score": 120,
+    "streak": 0,
+    "total_focus_time": 7200,
+    "risk_level": "medium",
+    "created_at": "2026-04-24T00:00:00.000Z"
+  },
+  {
+    "id": "user_80b3e0fa7ba8",
+    "username": "brainiac",
+    "email": "brainiacog833@gmail.com",
+    "password_hash": "222222",
+    "focus_score": 0,
+    "streak": 0,
+    "total_focus_time": 0,
+    "risk_level": "low",
+    "created_at": "2026-05-03T13:37:39.594Z"
+  },
+  {
+    "id": "user_e071dfdd9d40",
+    "username": "Tester",
+    "email": "test@test.com",
+    "password_hash": "password123",
+    "focus_score": 0,
+    "streak": 0,
+    "total_focus_time": 0,
+    "risk_level": "low",
+    "created_at": "2026-05-03T13:44:47.738Z"
+  },
+  {
+    "id": "user_7b09464871d2",
+    "username": "Tester",
+    "email": "tester2@test.com",
+    "password_hash": "password123",
+    "focus_score": 0,
+    "streak": 0,
+    "total_focus_time": 0,
+    "risk_level": "low",
+    "created_at": "2026-05-03T13:46:49.081Z"
+  },
+  {
+    "id": "user_7e74cb569573",
+    "username": "FinalTest",
+    "email": "final@test.com",
+    "password_hash": "password123",
+    "focus_score": 0,
+    "streak": 0,
+    "total_focus_time": 0,
+    "risk_level": "low",
+    "created_at": "2026-05-03T13:53:37.360Z"
+  }
+]

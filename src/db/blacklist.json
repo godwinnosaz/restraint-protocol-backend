@@ -1,0 +1,20 @@
+{
+  "domains": [
+    { "id": "d1", "category": "adult_content", "type": "domain", "value": "pornhub.com", "severity": "critical", "action": "fail_session" },
+    { "id": "d2", "category": "adult_content", "type": "domain", "value": "xvideos.com", "severity": "critical", "action": "fail_session" },
+    { "id": "d3", "category": "gambling_betting", "type": "domain", "value": "bet365.com", "severity": "high", "action": "fail_session" },
+    { "id": "d4", "category": "gambling_betting", "type": "domain", "value": "stake.com", "severity": "high", "action": "fail_session" },
+    { "id": "d5", "category": "blocked_domain", "type": "domain", "value": "tiktok.com", "severity": "medium", "action": "warn" },
+    { "id": "d6", "category": "blocked_domain", "type": "domain", "value": "instagram.com", "severity": "medium", "action": "warn" }
+  ],
+  "apps": [
+    { "id": "a1", "category": "blocked_app", "type": "app_package", "value": "com.zhiliaoapp.musically", "severity": "high", "action": "fail_session" },
+    { "id": "a2", "category": "blocked_app", "type": "app_package", "value": "com.instagram.android", "severity": "medium", "action": "warn" },
+    { "id": "a3", "category": "gambling_betting", "type": "app_package", "value": "com.bet365.bet365", "severity": "critical", "action": "fail_session" }
+  ],
+  "keywords": [
+    { "id": "k1", "category": "adult_content", "type": "keyword", "value": "porn", "severity": "high", "action": "warn" },
+    { "id": "k2", "category": "gambling_betting", "type": "keyword", "value": "casino", "severity": "high", "action": "warn" },
+    { "id": "k3", "category": "custom_blocked", "type": "keyword", "value": "gore", "severity": "critical", "action": "fail_session" }
+  ]
+}

@@ -1,0 +1,118 @@
+[
+  {
+    "id": "event_d2ec4a0ff2dc",
+    "type": "AI_ANALYSIS_GENERATED",
+    "user_id": "user_001",
+    "session_id": "pre_session",
+    "metadata": {
+      "type": "risk"
+    },
+    "timestamp": "2026-04-24T18:08:06.174Z"
+  },
+  {
+    "id": "event_4d8bca1396f1",
+    "type": "AI_ANALYSIS_GENERATED",
+    "user_id": "user_001",
+    "session_id": "pre_session",
+    "metadata": {
+      "type": "risk"
+    },
+    "timestamp": "2026-05-03T12:22:43.745Z"
+  },
+  {
+    "id": "event_8c119617f674",
+    "type": "SESSION_START",
+    "user_id": "user_001",
+    "session_id": "session_187185fdbd8c",
+    "metadata": {
+      "duration": 1800,
+      "mode": "simulated"
+    },
+    "timestamp": "2026-05-03T12:22:55.580Z"
+  },
+  {
+    "id": "event_f2263b6e5731",
+    "type": "STAKE_LOCKED",
+    "user_id": "user_001",
+    "session_id": "session_187185fdbd8c",
+    "metadata": {
+      "amount": 5000,
+      "currency": "NGN",
+      "tx": null
+    },
+    "timestamp": "2026-05-03T12:22:55.584Z"
+  },
+  {
+    "id": "event_fa3304bc4efb",
+    "type": "SESSION_FAIL",
+    "user_id": "user_001",
+    "session_id": "session_187185fdbd8c",
+    "metadata": {
+      "resolveSignature": null
+    },
+    "timestamp": "2026-05-03T12:25:18.134Z"
+  },
+  {
+    "id": "event_1c75bb4a3be6",
+    "type": "STAKE_SLASHED",
+    "user_id": "user_001",
+    "session_id": "session_187185fdbd8c",
+    "metadata": {
+      "txSignature": null
+    },
+    "timestamp": "2026-05-03T12:25:18.141Z"
+  },
+  {
+    "id": "event_dbcfaac5bc5f",
+    "type": "AI_ANALYSIS_GENERATED",
+    "user_id": "user_001",
+    "session_id": "session_187185fdbd8c",
+    "metadata": {
+      "type": "advice"
+    },
+    "timestamp": "2026-05-03T12:25:18.155Z"
+  },
+  {
+    "id": "event_1a9b88ea9b0f",
+    "type": "AI_ANALYSIS_GENERATED",
+    "user_id": "user_30104ae05a9e",
+    "session_id": "pre_session",
+    "metadata": {
+      "type": "risk"
+    },
+    "timestamp": "2026-05-10T19:17:02.360Z"
+  },
+  {
+    "id": "event_783ef52e6797",
+    "type": "SESSION_START",
+    "user_id": "user_30104ae05a9e",
+    "session_id": "session_67e6df4d8311",
+    "metadata": {
+      "duration": 1500,
+      "mode": "simulated"
+    },
+    "timestamp": "2026-05-10T19:17:07.953Z"
+  },
+  {
+    "id": "event_4c0e395aaf45",
+    "type": "STAKE_LOCKED",
+    "user_id": "user_30104ae05a9e",
+    "session_id": "session_67e6df4d8311",
+    "metadata": {
+      "amount": 5000,
+      "currency": "NGN",
+      "tx": null
+    },
+    "timestamp": "2026-05-10T19:17:07.956Z"
+  },
+  {
+    "id": "event_e573fe9a6b41",
+    "type": "AI_ANALYSIS_GENERATED",
+    "user_id": "user_30104ae05a9e",
+    "session_id": "pre_session",
+    "metadata": {
+      "type": "risk"
+    },
+    "timestamp": "2026-05-10T19:38:17.239Z"
+  }
+]

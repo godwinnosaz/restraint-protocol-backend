@@ -1,0 +1,67 @@
+[
+  {
+    "id": "session_187185fdbd8c",
+    "user_id": "user_001",
+    "status": "failed",
+    "duration": 1800,
+    "remaining_time": 1800,
+    "start_time": "2026-05-03T12:22:55.578Z",
+    "end_time": "2026-05-03T12:25:18.132Z",
+    "blocked_apps": [
+      "Instagram"
+    ],
+    "blocked_sites": [
+      "twitter.com",
+      "youtube.com"
+    ],
+    "stake_amount": 5000,
+    "currency": "NGN",
+    "ai_risk_score": 0.3,
+    "stake_mode": "simulated",
+    "wallet_address": null,
+    "stake_tx_signature": null,
+    "resolve_tx_signature": null,
+    "chain_status": "pending",
+    "strict_mode": true,
+    "state_history": [
+      {
+        "state": "active",
+        "timestamp": "2026-05-03T12:22:55.578Z"
+      },
+      {
+        "state": "failed",
+        "timestamp": "2026-05-03T12:25:18.132Z"
+      }
+    ],
+    "created_at": "2026-05-03T12:22:55.578Z"
+  },
+  {
+    "id": "session_67e6df4d8311",
+    "user_id": "user_30104ae05a9e",
+    "status": "active",
+    "duration": 1500,
+    "remaining_time": 1500,
+    "start_time": "2026-05-10T19:17:07.952Z",
+    "end_time": null,
+    "blocked_apps": [
+      "Instagram"
+    ],
+    "blocked_sites": [],
+    "stake_amount": 5000,
+    "currency": "NGN",
+    "ai_risk_score": 0.5,
+    "stake_mode": "simulated",
+    "wallet_address": null,
+    "stake_tx_signature": null,
+    "resolve_tx_signature": null,
+    "chain_status": "pending",
+    "strict_mode": true,
+    "state_history": [
+      {
+        "state": "active",
+        "timestamp": "2026-05-10T19:17:07.952Z"
+      }
+    ],
+    "created_at": "2026-05-10T19:17:07.952Z"
+  }
+]
