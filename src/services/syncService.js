@@ -68,4 +68,4 @@ async function acceptEvents(userUuid, inputEvents) {
   }
 }
 
-module.exports = { acceptEvents };
+module.exports = { acceptEvents, validateEvent };
