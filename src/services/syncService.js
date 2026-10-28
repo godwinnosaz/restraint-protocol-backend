@@ -21,7 +21,37 @@ function validateEvent(event) {
   if (!event.payload || typeof event.payload !== 'object' || Array.isArray(event.payload)) {
     throw invalid('Event payload must be an object.');
   }
-  const payloadJson = JSON.stringify(event.payload);
+  const allowedDurations = new Set([5, 15, 30, 60, 180]);
+  const payload = event.payload;
+  if (event.type === 'commitment.updated') {
+    const keys = Object.keys(payload).sort().join(',');
+    if (keys !== 'activeDeadlineEpochMillis,selectedDurationMinutes,updatedAtEpochMillis') {
+      throw invalid('Commitment payload contains unsupported fields.');
+    }
+    if (!allowedDurations.has(payload.selectedDurationMinutes) ||
+        !Number.isSafeInteger(payload.activeDeadlineEpochMillis) || payload.activeDeadlineEpochMillis < 0 ||
+        !Number.isSafeInteger(payload.updatedAtEpochMillis) || payload.updatedAtEpochMillis <= 0) {
+      throw invalid('Commitment payload values are invalid.');
+    }
+  } else if (event.type === 'intervention.event') {
+    const keys = Object.keys(payload).sort().join(',');
+    const allowedOutcomes = new Set([
+      'warning_shown',
+      'restriction_started',
+      'restriction_completed',
+      'user_returned_to_safety'
+    ]);
+    if (keys !== 'createdAtEpochMillis,durationMinutes,outcome') {
+      throw invalid('Intervention payload contains unsupported fields.');
+    }
+    if (!allowedOutcomes.has(payload.outcome) ||
+        !allowedDurations.has(payload.durationMinutes) ||
+        !Number.isSafeInteger(payload.createdAtEpochMillis) || payload.createdAtEpochMillis <= 0) {
+      throw invalid('Intervention payload values are invalid.');
+    }
+  }
+
+  const payloadJson = JSON.stringify(payload);
   if (Buffer.byteLength(payloadJson, 'utf8') > 8192) {
     throw invalid('Event payload exceeds the 8 KB limit.');
   }
