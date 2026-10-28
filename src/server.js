@@ -62,19 +62,24 @@ app.use((err, req, res, next) => {
 });
 
 // ─── Start Server ─────────────────────────────────────────────────────────────
-initDb();
-// Listen on 0.0.0.0 so Android devices on the same Wi-Fi can reach this server
-
-app.listen(PORT, '0.0.0.0', () => {
-  console.log('');
-  console.log('╔══════════════════════════════════════════════════╗');
-  console.log('║        RESTRAINT PROTOCOL — BACKEND SERVER       ║');
-  console.log('╠══════════════════════════════════════════════════╣');
-  console.log(`║  Local:    http://localhost:${PORT}                  ║`);
-  console.log(`║  Network:  Use your IPv4 address (see ipconfig)  ║`);
-  console.log(`║  Health:   GET /health                           ║`);
-  console.log('╚══════════════════════════════════════════════════╝');
-  console.log('');
-});
+// Wait for schema initialization before accepting requests.
+initDb()
+  .then(() => {
+    // Listen on 0.0.0.0 so Android devices on the same Wi-Fi can reach this server.
+    app.listen(PORT, '0.0.0.0', () => {
+      console.log('');
+      console.log('╔══════════════════════════════════════════════════╗');
+      console.log('║        RESTRAINT PROTOCOL — BACKEND SERVER       ║');
+      console.log('╠══════════════════════════════════════════════════╣');
+      console.log(`║  Local:    http://localhost:${PORT}                  ║`);
+      console.log('║  Health:   GET /health                           ║');
+      console.log('╚══════════════════════════════════════════════════╝');
+      console.log('');
+    });
+  })
+  .catch((err) => {
+    console.error('Backend startup aborted because database initialization failed:', err);
+    process.exit(1);
+  });
 
 module.exports = app;

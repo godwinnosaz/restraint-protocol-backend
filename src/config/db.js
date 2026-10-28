@@ -58,6 +58,7 @@ async function initDb() {
   } catch (err) {
     console.error('MySQL Database initialization failed:');
     console.error(err);
+    throw err;
   }
 }
 
