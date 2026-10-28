@@ -21,7 +21,7 @@ function validateEvent(event) {
   if (!event.payload || typeof event.payload !== 'object' || Array.isArray(event.payload)) {
     throw invalid('Event payload must be an object.');
   }
-  const allowedDurations = new Set([5, 15, 30, 60, 180]);
+  const allowedDurations = new Set([15, 60, 180, 720, 1440, 4320]);
   const payload = event.payload;
   if (event.type === 'commitment.updated') {
     const keys = Object.keys(payload).sort().join(',');
