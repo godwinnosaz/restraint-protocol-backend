@@ -39,6 +39,21 @@ async function initDb() {
       )
     `);
     
+    // Durable, per-user idempotent event inbox for offline-first mobile sync.
+    await query(`
+      CREATE TABLE IF NOT EXISTS rp_sync_events (
+        id BIGINT UNSIGNED AUTO_INCREMENT PRIMARY KEY,
+        user_uuid VARCHAR(100) NOT NULL,
+        client_event_id VARCHAR(80) NOT NULL,
+        event_type VARCHAR(64) NOT NULL,
+        client_created_at_ms BIGINT UNSIGNED NOT NULL,
+        payload_json JSON NOT NULL,
+        received_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
+        UNIQUE KEY uq_rp_sync_user_event (user_uuid, client_event_id),
+        KEY idx_rp_sync_user_received (user_uuid, received_at)
+      ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4
+    `);
+
     console.log('MySQL Database initialized successfully.');
   } catch (err) {
     console.error('MySQL Database initialization failed:');

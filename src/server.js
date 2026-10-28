@@ -10,6 +10,7 @@ const aiRoutes = require('./routes/aiRoutes');
 const statsRoutes = require('./routes/statsRoutes');
 const blacklistRoutes = require('./routes/blacklistRoutes');
 const eventRoutes = require('./routes/eventRoutes');
+const syncRoutes = require('./routes/syncRoutes');
 
 
 const app = express();
@@ -17,7 +18,7 @@ const PORT = process.env.PORT || 5000;
 
 // ─── Middleware ───────────────────────────────────────────────────────────────
 app.use(cors({ origin: '*' }));
-app.use(express.json());
+app.use(express.json({ limit: '128kb' }));
 app.use(express.urlencoded({ extended: true }));
 
 // ─── Request Logger ───────────────────────────────────────────────────────────
@@ -33,6 +34,7 @@ app.use('/ai', aiRoutes);
 app.use('/stats', statsRoutes);
 app.use('/blacklist', blacklistRoutes);
 app.use('/events', eventRoutes);
+app.use('/api/v1/sync', syncRoutes);
 
 
 // ─── Health Check ─────────────────────────────────────────────────────────────
