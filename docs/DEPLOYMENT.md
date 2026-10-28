@@ -9,6 +9,15 @@
 
 ## First deployment
 
+### Docker Compose (recommended starting point)
+
+1. Copy .env.example to .env and set unique, strong values for DB_PASSWORD, MYSQL_ROOT_PASSWORD, and JWT_SECRET. Do not commit .env.
+2. Start the database and API with docker compose up -d --build.
+3. Confirm the API responds to GET /health on localhost port 5000.
+4. Put the API behind an HTTPS reverse proxy before allowing remote/mobile clients.
+
+### Existing Node/MySQL host
+
 1. Create a database named restraint_protocol and a database user with privileges limited to that database.
 2. Copy .env.example to .env and set DB credentials plus a strong random JWT_SECRET.
 3. Install dependencies with npm ci.
